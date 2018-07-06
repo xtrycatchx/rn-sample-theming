@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Text, TouchableHighlight } from 'react-native';
-import ThemeProvider from '../theme/themeprovider'
+//import ThemeProvider from '../theme/themeprovider';
 
-export default class Button extends Component {
+class Button extends Component {
   render() {
     return (
       <TouchableHighlight
@@ -17,4 +17,21 @@ export default class Button extends Component {
   }
 }
 
-Button.contextTypes = ThemeProvider.childContextTypes;
+//Button.contextTypes = ThemeProvider.childContextTypes;
+
+export default withTheme({
+  theme: {
+    rootView: {
+      flex: PropTypes.number,
+      backgroundColor: PropTypes.string,
+      flexDirection: PropTypes.string,
+      justifyContent: PropTypes.string,
+      alignItems: PropTypes.string,
+    },
+    label: {
+      color: PropTypes.string,
+      fontSize: PropTypes.number,
+      fontStyle: PropTypes.string,
+    },
+  }
+})(Button)
