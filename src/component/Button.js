@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Text, TouchableHighlight } from 'react-native';
+import PropTypes from 'prop-types';
 //import ThemeProvider from '../theme/themeprovider';
-import withTheme from '../theme/withTheme'
+import withTheme from '../theme/withTheme';
 
 class Button extends Component {
   // render() {
