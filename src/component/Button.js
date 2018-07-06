@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import { Text, TouchableHighlight } from 'react-native';
 //import ThemeProvider from '../theme/themeprovider';
+import withTheme from '../theme/withTheme'
 
 class Button extends Component {
+  // render() {
+  //   return (
+  //     <TouchableHighlight
+  //       activeOpacity={60}
+  //       underlayColor={this.context.theme.extras.underlayColor}
+  //       onPress={this.props.onPress}
+  //       style={this.context.theme.button}
+  //     >
+  //       <Text style={this.context.theme.buttonLabel}>{this.props.label}</Text>
+  //     </TouchableHighlight>
+  //   );
+  // }
   render() {
     return (
       <TouchableHighlight
