@@ -1,18 +1,17 @@
 import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 
-export default class ThemeProvider extends Component {
-  getChildContext() {
-    return {
-      theme: this.props.theme,
-    };
-  }
-  render() {
-    return Children.only(this.props.children);
-  }
-}
+// export default class ThemeProvider extends Component {
+//   getChildContext() {
+//     return {
+//       theme: this.props.theme,
+//     };
+//   }
+//   render() {
+//     return Children.only(this.props.children);
+//   }
+// }
 
-// Bye bye lazy approach
 // ThemeProvider.childContextTypes = {
 //   theme: PropTypes.shape({
 //     rootView: {
