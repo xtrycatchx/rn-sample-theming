@@ -20,11 +20,11 @@ class Button extends Component {
     return (
       <TouchableHighlight
         activeOpacity={60}
-        underlayColor={this.context.theme.extras.underlayColor}
+        underlayColor={this.props.theme.extras.underlayColor}
         onPress={this.props.onPress}
-        style={this.context.theme.button}
+        style={this.props.theme.button}
       >
-        <Text style={this.context.theme.buttonLabel}>{this.props.label}</Text>
+        <Text style={this.props.theme.buttonLabel}>{this.props.label}</Text>
       </TouchableHighlight>
     );
   }
