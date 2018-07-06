@@ -12,32 +12,37 @@ export default class ThemeProvider extends Component {
   }
 }
 
+// temporary, this will be replaced with HOC soon
 ThemeProvider.childContextTypes = {
-  theme: PropTypes.shape({
-    rootView: {
-      flex: PropTypes.number,
-      backgroundColor: PropTypes.string,
-      flexDirection: PropTypes.string,
-      justifyContent: PropTypes.string,
-      alignItems: PropTypes.string,
-    },
-    button: {
-      borderRadius: PropTypes.number,
-      padding: PropTypes.number,
-      backgroundColor: PropTypes.string,
-      margin: PropTypes.number,
-    },
-    buttonLabel: {
-      color: PropTypes.string,
-      fontStyle: PropTypes.string,
-    },
-    label: {
-      color: PropTypes.string,
-      fontSize: PropTypes.number,
-      fontStyle: PropTypes.string,
-    },
-    extras: {
-      underlayColor: PropTypes.string,
-    }
-  }),
-};
+  theme: PropTypes.object
+}
+
+// ThemeProvider.childContextTypes = {
+//   theme: PropTypes.shape({
+//     rootView: {
+//       flex: PropTypes.number,
+//       backgroundColor: PropTypes.string,
+//       flexDirection: PropTypes.string,
+//       justifyContent: PropTypes.string,
+//       alignItems: PropTypes.string,
+//     },
+//     button: {
+//       borderRadius: PropTypes.number,
+//       padding: PropTypes.number,
+//       backgroundColor: PropTypes.string,
+//       margin: PropTypes.number,
+//     },
+//     buttonLabel: {
+//       color: PropTypes.string,
+//       fontStyle: PropTypes.string,
+//     },
+//     label: {
+//       color: PropTypes.string,
+//       fontSize: PropTypes.number,
+//       fontStyle: PropTypes.string,
+//     },
+//     extras: {
+//       underlayColor: PropTypes.string,
+//     }
+//   }),
+// };
