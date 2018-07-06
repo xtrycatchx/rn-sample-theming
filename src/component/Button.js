@@ -21,12 +21,16 @@ class Button extends Component {
 
 export default withTheme({
   theme: {
-    rootView: {
-      flex: PropTypes.number,
+    underlayColor: PropTypes.string,
+    button: {
+      borderRadius: PropTypes.number,
+      padding: PropTypes.number,
       backgroundColor: PropTypes.string,
-      flexDirection: PropTypes.string,
-      justifyContent: PropTypes.string,
-      alignItems: PropTypes.string,
+      margin: PropTypes.number,
+    },
+    buttonLabel: {
+      color: PropTypes.string,
+      fontStyle: PropTypes.string,
     },
     label: {
       color: PropTypes.string,
