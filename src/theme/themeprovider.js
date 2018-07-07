@@ -2,20 +2,36 @@ import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ThemeProvider extends Component {
+  // getChildContext() {
+  //   return {
+  //     theme: this.props.theme,
+  //   };
+  // }
+  // render() {
+  //   return Children.only(this.props.children);
+  // }
+  static propTypes = {
+    children: React.PropTypes.node,
+    theme: React.PropTypes.object
+  };
+
+  static childContextTypes = {
+    theme: React.PropTypes.object
+  };
+
   getChildContext() {
-    return {
-      theme: this.props.theme,
-    };
+    return { theme: this.props.theme };
   }
+
   render() {
-    return Children.only(this.props.children);
+    return this.props.children;
   }
 }
 
 // temporary, this will be replaced with HOC soon
-ThemeProvider.childContextTypes = {
-  theme: PropTypes.object
-}
+// ThemeProvider.childContextTypes = {
+//   theme: PropTypes.object
+// }
 
 // ThemeProvider.childContextTypes = {
 //   theme: PropTypes.shape({
