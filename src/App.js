@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableHighlight } from 'react-native';
 import ThemeProvider from './theme/themeprovider'
+import ThemeProviderHoc from './theme/themeproviderhoc'
 import dayMode from './theme/daymode'
 import nightMode from './theme/nightmode'
 import Main from './component/Main'
@@ -24,8 +25,15 @@ export default class App extends Component {
 
   render() {
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <ThemeProviderHoc theme={this.state.theme}>
         <MainHoc onChangeTheme={this.switchTheme} />
+      </ThemeProviderHoc>
+    );
+  }
+  renderOld() {
+    return (
+      <ThemeProvider theme={this.state.theme}>
+        <Main onChangeTheme={this.switchTheme} />
       </ThemeProvider>
     );
   }

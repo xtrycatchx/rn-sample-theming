@@ -29,22 +29,22 @@ class Main extends Component {
 }
 
 // not so lazy approach and not polluting context props
-// export default withTheme({
-//   theme: {
-//     rootView: {
-//       flex: PropTypes.number,
-//       backgroundColor: PropTypes.string,
-//       flexDirection: PropTypes.string,
-//       justifyContent: PropTypes.string,
-//       alignItems: PropTypes.string,
-//     },
-//     label: {
-//       color: PropTypes.string,
-//       fontSize: PropTypes.number,
-//       fontStyle: PropTypes.string,
-//     },
-//   }
-// })(Main)
+export default withTheme({
+  theme: {
+    rootView: {
+      flex: PropTypes.number,
+      backgroundColor: PropTypes.string,
+      flexDirection: PropTypes.string,
+      justifyContent: PropTypes.string,
+      alignItems: PropTypes.string,
+    },
+    label: {
+      color: PropTypes.string,
+      fontSize: PropTypes.number,
+      fontStyle: PropTypes.string,
+    },
+  }
+})(Main)
 
 // commenting this coz this was the lazy approach :D
 //Main.contextTypes = ThemeProvider.childContextTypes;

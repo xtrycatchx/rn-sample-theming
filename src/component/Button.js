@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TouchableHighlight } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 //import ThemeProvider from '../theme/themeprovider';
 import withTheme from '../theme/withTheme';
@@ -19,37 +19,37 @@ class Button extends Component {
   // }
   render() {
     return (
-      <TouchableHighlight
+      <TouchableOpacity
         activeOpacity={60}
         underlayColor={this.props.theme.extras.underlayColor}
         onPress={this.props.onPress}
         style={this.props.theme.button}
       >
         <Text style={this.props.theme.buttonLabel}>{this.props.label}</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   }
 }
 
 //Button.contextTypes = ThemeProvider.childContextTypes;
 
-// export default withTheme({
-//   theme: {
-//     underlayColor: PropTypes.string,
-//     button: {
-//       borderRadius: PropTypes.number,
-//       padding: PropTypes.number,
-//       backgroundColor: PropTypes.string,
-//       margin: PropTypes.number,
-//     },
-//     buttonLabel: {
-//       color: PropTypes.string,
-//       fontStyle: PropTypes.string,
-//     },
-//     label: {
-//       color: PropTypes.string,
-//       fontSize: PropTypes.number,
-//       fontStyle: PropTypes.string,
-//     },
-//   }
-// })(Button)
+export default withTheme({
+  theme: {
+    underlayColor: PropTypes.string,
+    button: {
+      borderRadius: PropTypes.number,
+      padding: PropTypes.number,
+      backgroundColor: PropTypes.string,
+      margin: PropTypes.number,
+    },
+    buttonLabel: {
+      color: PropTypes.string,
+      fontStyle: PropTypes.string,
+    },
+    label: {
+      color: PropTypes.string,
+      fontSize: PropTypes.number,
+      fontStyle: PropTypes.string,
+    },
+  }
+})(Button)

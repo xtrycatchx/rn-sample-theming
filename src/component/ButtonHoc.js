@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Text, TouchableHighlight } from 'react-native';
-import withTheme from '../theme/withTheme';
-
+import { Text, TouchableOpacity } from 'react-native';
+import withThemeHoc from '../theme/withThemeHoc';
 
 const Button = ({ children, onClick, theme }) => (
-  <TouchableHighlight
+  <TouchableOpacity
     activeOpacity={60}
     underlayColor={theme.extras.underlayColor}
     onPress={onClick}
     style={theme.button}
   >
     {children}
-  </TouchableHighlight>
+  </TouchableOpacity>
 );
-export default withTheme(Button);
+export default withThemeHoc(Button);

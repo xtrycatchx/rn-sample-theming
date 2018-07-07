@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import ButtonHoc from './ButtonHoc'
-import withTheme from '../theme/withTheme';
+import withThemeHoc from '../theme/withThemeHoc';
 
 const MainHoc = ({ onChangeTheme, theme }) => (
   <View style={theme.rootView}>
@@ -12,5 +12,5 @@ const MainHoc = ({ onChangeTheme, theme }) => (
   </View>
 );
 
-export default withTheme(MainHoc);
+export default withThemeHoc(MainHoc);
 
