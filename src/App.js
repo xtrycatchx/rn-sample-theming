@@ -4,6 +4,7 @@ import ThemeProvider from './theme/themeprovider'
 import dayMode from './theme/daymode'
 import nightMode from './theme/nightmode'
 import Main from './component/Main'
+import MainHoc from './component/MainHoc'
 
 export default class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class App extends Component {
   render() {
     return (
       <ThemeProvider theme={this.state.theme}>
-        <Main onChangeTheme={this.switchTheme} />
+        <MainHoc onChangeTheme={this.switchTheme} />
       </ThemeProvider>
     );
   }
