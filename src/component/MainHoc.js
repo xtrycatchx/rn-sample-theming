@@ -6,6 +6,7 @@ import withThemeHoc from '../theme/withThemeHoc';
 
 const MainHoc = ({ onChangeTheme, theme }) => (
   <View style={theme.rootView}>
+    <Text style={theme.label}>Hello World</Text>
     <ButtonHoc onClick={onChangeTheme} theme={theme}>
       <Text style={theme.buttonLabel}>Change Label</Text>
     </ButtonHoc>
