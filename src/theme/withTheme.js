@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // const withTheme = (contextTypes) => (Component) => {
 //   ThemedComponent = (props, context) =>
@@ -11,7 +12,7 @@ import React from 'react';
 
 const withTheme = (Child) => class extends React.Component {
   static contextTypes = {
-    theme: React.PropTypes.object
+    theme: PropTypes.object
   };
 
   render() {

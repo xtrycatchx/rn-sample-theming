@@ -11,12 +11,12 @@ export default class ThemeProvider extends Component {
   //   return Children.only(this.props.children);
   // }
   static propTypes = {
-    children: React.PropTypes.node,
-    theme: React.PropTypes.object
+    children: PropTypes.node,
+    theme: PropTypes.object
   };
 
   static childContextTypes = {
-    theme: React.PropTypes.object
+    theme: PropTypes.object
   };
 
   getChildContext() {
