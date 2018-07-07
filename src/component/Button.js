@@ -33,23 +33,23 @@ class Button extends Component {
 
 //Button.contextTypes = ThemeProvider.childContextTypes;
 
-export default withTheme({
-  theme: {
-    underlayColor: PropTypes.string,
-    button: {
-      borderRadius: PropTypes.number,
-      padding: PropTypes.number,
-      backgroundColor: PropTypes.string,
-      margin: PropTypes.number,
-    },
-    buttonLabel: {
-      color: PropTypes.string,
-      fontStyle: PropTypes.string,
-    },
-    label: {
-      color: PropTypes.string,
-      fontSize: PropTypes.number,
-      fontStyle: PropTypes.string,
-    },
-  }
-})(Button)
+// export default withTheme({
+//   theme: {
+//     underlayColor: PropTypes.string,
+//     button: {
+//       borderRadius: PropTypes.number,
+//       padding: PropTypes.number,
+//       backgroundColor: PropTypes.string,
+//       margin: PropTypes.number,
+//     },
+//     buttonLabel: {
+//       color: PropTypes.string,
+//       fontStyle: PropTypes.string,
+//     },
+//     label: {
+//       color: PropTypes.string,
+//       fontSize: PropTypes.number,
+//       fontStyle: PropTypes.string,
+//     },
+//   }
+// })(Button)
