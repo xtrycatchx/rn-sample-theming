@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
-//import ThemeProvider from '../theme/themeprovider'
-import Button from './Button'
+//import ThemeProvider from '../theme/themeprovider';
+import Button from './Button';
 import withTheme from '../theme/withTheme';
 
 class Main extends Component {
