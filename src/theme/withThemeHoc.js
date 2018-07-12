@@ -10,14 +10,26 @@ import PropTypes from 'prop-types';
 
 // export default withTheme;
 
-const withThemeHoc = (Child) => class extends React.Component {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+//const withThemeHoc = (Child) => class extends React.Component {
+//  static contextTypes = {
+//    theme: PropTypes.object
+//  };
 
-  render() {
-    return <Child {...this.props} {...this.context} />;
+//  render() {
+//    return <Child {...this.props} {...this.context} />;
+//  }
+//};
+
+const withThemeHoc = (Child) => {
+  return class NewComp extends React.Component {
+    static contextTypes = {
+      theme: PropTypes.object
+    };
+
+    render() {
+      return <Child {...this.props} {...this.context}>{this.children}</Comp>
+    }
   }
-};
+}
 
 export default withThemeHoc;
