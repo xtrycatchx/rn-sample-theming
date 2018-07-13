@@ -1,7 +1,7 @@
 import React, { Component, Children } from 'react';
 import PropTypes from 'prop-types';
 
-export default class ThemeProviderHoc extends Component {
+class ThemeProviderHoc extends Component {
 
   static childContextTypes = {
     theme: PropTypes.object
@@ -15,3 +15,5 @@ export default class ThemeProviderHoc extends Component {
     return this.props.children;
   }
 }
+
+export default ThemeProviderHoc;
