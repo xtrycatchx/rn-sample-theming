@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class ThemeProviderHoc extends Component {
 
   static propTypes = {
-    children: PropTypes.node,
+    //children: PropTypes.node,
     theme: PropTypes.object
   };
 
