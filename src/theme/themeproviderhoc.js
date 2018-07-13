@@ -3,11 +3,6 @@ import PropTypes from 'prop-types';
 
 export default class ThemeProviderHoc extends Component {
 
-  //static propTypes = {
-    //children: PropTypes.node,
-    //theme: PropTypes.object
-  //};
-
   static childContextTypes = {
     theme: PropTypes.object
   };
