@@ -5,7 +5,7 @@ export default class ThemeProviderHoc extends Component {
 
   static propTypes = {
     //children: PropTypes.node,
-    theme: PropTypes.object
+    //theme: PropTypes.object
   };
 
   static childContextTypes = {
