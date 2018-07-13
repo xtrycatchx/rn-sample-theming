@@ -13,13 +13,13 @@ export default class App extends Component {
       theme: dayMode
   }
 
-  constructor(props) {
-    super(props)
+  //constructor(props) {
+    //super(props)
     //this.switchTheme = this.switchTheme.bind(this)
-    this.state = {
-      theme: dayMode
-    }
-  }
+    //this.state = {
+      //theme: dayMode
+    //}
+  //}
   
   switchTheme() {
     this.setState({
