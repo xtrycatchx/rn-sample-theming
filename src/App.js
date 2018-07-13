@@ -13,7 +13,7 @@ export default class App extends Component {
       theme: dayMode
   }
   
-  switchTheme() {
+  switchTheme = () => {
     this.setState({
       theme: this.state.theme === dayMode
         ? nightMode : dayMode
