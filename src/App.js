@@ -8,9 +8,14 @@ import Main from './component/Main';
 import MainHoc from './component/MainHoc';
 
 export default class App extends Component {
+  
+  state = {
+      theme: dayMode
+  }
+
   constructor(props) {
     super(props)
-    this.switchTheme = this.switchTheme.bind(this)
+    //this.switchTheme = this.switchTheme.bind(this)
     this.state = {
       theme: dayMode
     }
