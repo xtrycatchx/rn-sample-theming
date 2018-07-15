@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const withThemeHoc = (Component) => class extends React.PureComponent {
+const withTheme = (Component) => class extends React.PureComponent {
   static contextTypes = {
-    theme: PropTypes.object,
-    demoChangeTheme: PropTypes.func
+    theme: PropTypes.object
   };
 
   render() {
@@ -12,4 +11,4 @@ const withThemeHoc = (Component) => class extends React.PureComponent {
   }
 };
 
-export default withThemeHoc;
+export default withTheme;

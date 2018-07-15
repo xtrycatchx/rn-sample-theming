@@ -9,8 +9,7 @@ class Button extends Component {
         activeOpacity={60}
         underlayColor={this.props.theme.extras.underlayColor}
         onPress={this.props.onPress}
-        style={this.props.theme.button}
-      >
+        style={this.props.theme.button}>
         <Text style={this.props.theme.buttonLabel}>{this.props.label}</Text>
       </TouchableOpacity>
     );
