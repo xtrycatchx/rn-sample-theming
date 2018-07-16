@@ -5,10 +5,5 @@
     "react",
     "jsx-a11y",
     "import"
-  ],
-  "presets": [
-    "react-native",
-    "flow"
-  ],
-  "retainLines": true
+  ]
 }
