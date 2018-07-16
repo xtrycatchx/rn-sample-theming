@@ -5,21 +5,22 @@ import nightMode from './theme/nightmode';
 import Main from './component/Main';
 
 export default class App extends Component {
-  
   state = {
-      theme: dayMode
+    theme: dayMode,
   }
-  
+
   switchTheme = () => {
+    const { theme } = this.state;
     this.setState({
-      theme: this.state.theme === dayMode ? nightMode : dayMode
-    })
+      theme: theme === dayMode ? nightMode : dayMode,
+    });
   }
 
   render() {
+    const { theme } = this.state;
     return (
-      <ThemeProvider theme={this.state.theme}>
-        <Main onChangeTheme={this.switchTheme.bind(this)} />
+      <ThemeProvider theme={theme}>
+        <Main onChangeTheme={() => this.switchTheme()} />
       </ThemeProvider>
     );
   }
