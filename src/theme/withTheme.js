@@ -1,14 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ViewPropTypes } from 'react-native';
 
-const withTheme = (Component) => class extends React.PureComponent {
-  static contextTypes = {
-    theme: PropTypes.object
+export default function withTheme(Component) {
+  return class extends React.PureComponent {
+    static contextTypes = {
+      theme: ViewPropTypes.style.isRequired,
+    };
+
+    render() {
+      return <Component {...this.props} {...this.context} />;
+    }
   };
-
-  render() {
-    return <Component {...this.props} {...this.context} />;
-  }
-};
-
-export default withTheme;
+}
