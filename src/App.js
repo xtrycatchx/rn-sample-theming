@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <ThemeProvider theme={this.state.theme}>
-        <Main onChangeTheme={this.switchTheme} />
+        <Main onChangeTheme={this.switchTheme.bind(this)} />
       </ThemeProvider>
     );
   }
