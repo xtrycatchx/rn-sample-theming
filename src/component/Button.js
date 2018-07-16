@@ -16,4 +16,4 @@ class Button extends PureComponent {
   }
 }
 
-export default withTheme(Button)
+export default withTheme(Button);
