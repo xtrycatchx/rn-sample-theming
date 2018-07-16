@@ -1,17 +1,26 @@
-import React, { Component, Children } from 'react';
+import React from 'react';
+import { ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default class ThemeProvider extends React.Component {
-
+class ThemeProvider extends React.Component {
   static childContextTypes = {
-    theme: PropTypes.object
+    theme: ViewPropTypes.style.isRequired,
   };
 
   getChildContext() {
-    return { theme: this.props.theme };
+    const { theme } = this.props;
+    return { theme };
   }
 
   render() {
-    return this.props.children;
+    const { children } = this.props;
+    return children;
   }
 }
+
+ThemeProvider.propTypes = {
+  theme: ViewPropTypes.style.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+export default ThemeProvider;
