@@ -1,27 +1,21 @@
-import React, { PureComponent } from 'react';
-import { View, Text, ViewPropTypes } from 'react-native';
-import PropTypes from 'prop-types';
+// @flow
+import React from 'react';
+import { View, Text } from 'react-native';
 import Button from './Button';
 import withTheme from '../theme/withTheme';
 
-class Main extends PureComponent {
-  render() {
-    const { onChangeTheme, theme } = this.props;
-    const { rootView, label } = theme;
-    return (
-      <View style={rootView}>
-        <Text style={label}>
-        Hello World
-        </Text>
-        <Button onPress={onChangeTheme} label="Change Theme" />
-      </View>
-    );
-  }
-}
-
-Main.propTypes = {
-  theme: ViewPropTypes.style.isRequired,
-  onChangeTheme: PropTypes.func.isRequired,
+type Props = {
+  theme: Object,
+  onChangeTheme: Function,
 };
+
+const Main = ({ onChangeTheme, theme }: Props) => (
+  <View style={theme.rootView}>
+    <Text style={theme.label}>
+        Hello World
+    </Text>
+    <Button onPress={onChangeTheme} label="Change Theme" />
+  </View>
+);
 
 export default withTheme(Main);

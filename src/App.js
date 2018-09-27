@@ -20,7 +20,7 @@ export default class App extends Component {
     const { theme } = this.state;
     return (
       <ThemeProvider theme={theme}>
-        <Main onChangeTheme={() => this.switchTheme()} />
+        <Main onChangeTheme={this.switchTheme} />
       </ThemeProvider>
     );
   }
